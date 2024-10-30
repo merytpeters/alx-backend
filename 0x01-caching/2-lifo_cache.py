@@ -16,6 +16,10 @@ class LIFOCache(BaseCaching):
         if key is None or item is None:
             return
 
+        # Remove and reinsert key if it already exists to update its order
+        if key in self.cache_data:
+            del self.cache_data[key]
+
         if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             # Check if the cache exceeds the maximum
             recent_key = next(reversed(self.cache_data))
