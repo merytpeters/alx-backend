@@ -20,11 +20,11 @@ class LIFOCache(BaseCaching):
         if key in self.cache_data:
             del self.cache_data[key]
 
-        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
+        if len(self.cache_data) >= self.MAX_ITEMS:
             # Check if the cache exceeds the maximum
             recent_key = next(reversed(self.cache_data))
-            print(f"DISCARD: {recent_key}")
             del self.cache_data[recent_key]
+            print(f"DISCARD: {recent_key}")
 
         # Add new item to the cache
         self.cache_data[key] = item
