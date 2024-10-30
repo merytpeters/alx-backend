@@ -20,7 +20,7 @@ class LIFOCache(BaseCaching):
         if key in self.cache_data:
             del self.cache_data[key]
 
-        if len(self.cache_data) >= self.MAX_ITEMS:
+        elif len(self.cache_data) >= self.MAX_ITEMS:
             # Check if the cache exceeds the maximum
             recent_key = next(reversed(self.cache_data))
             del self.cache_data[recent_key]
