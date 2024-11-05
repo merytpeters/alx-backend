@@ -13,11 +13,12 @@
     {% else %}
         <p>{{ _('not_logged_in') }}</p>
     {% endif %}
-    <p>The current timezone: </p>
-    {% if not g.timezone %}
-        <p>{{ _('Default_timezone', timezone='UTC' )}}</p>
-    {% endif %}
-    </p>
     </h2>
+    <h3>Current time: {{ timezone }}</h3>
+
+    <hr>
+
+    <p>Try changing the timezone in the URL like so:</p>
+    <p>http://127.0.0.1:5000/?timezone=Europe/London</p>
 </body>
 </html>
