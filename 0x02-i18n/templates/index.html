@@ -6,7 +6,7 @@
     <title>{{ _('home_title') }}</title>
 </head>
 <body>
-    <h1>{{ _('home_header') }}<h1>
+    <h1>{{ _('home_header') }}</h1>
     <h2>
     {% if g.user %}
         <p>{{ _('logged_in_as', username=g.user['name'] )}}</p>
@@ -14,7 +14,7 @@
         <p>{{ _('not_logged_in') }}</p>
     {% endif %}
     </h2>
-    <h3>Current time: {{ current_time }}</h3>
+    <h3>{{ _('Current time: %(current_time)s') % {'current_time': current_time} }}</h3>
 
     <hr>
 
