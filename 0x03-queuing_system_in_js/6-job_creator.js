@@ -1,8 +1,8 @@
 import kue from 'kue';
 
 const jobData = {
-  phoneNumber: '123458479',
-  message: 'This is atest notification message'
+  phoneNumber: '4153518780',
+  message: 'This is the code to verify your account',
 };
 
 const push_notification_code = kue.createQueue();
