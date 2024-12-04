@@ -62,7 +62,7 @@ jobs.forEach((jobData) => {
         
       // On job completion
       job.on('complete', () => {
-        console.log(`Notification job ${job.id} completed`);
+        console.log(`Notification job #${job.id} completed`);
       });
   
       // On job failure
@@ -72,7 +72,7 @@ jobs.forEach((jobData) => {
   
       // On job progress
       job.on('progress', (progress, data) => {
-        console.log(`Notification job ${job.id} ${progress}% complete`);
+        console.log(`Notification job #${job.id} ${progress}% complete`);
       });
     }
   });
