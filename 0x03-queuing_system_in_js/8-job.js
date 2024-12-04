@@ -8,7 +8,7 @@ function createPushNotificationsJobs(jobs, queue) {
   }
 
   jobs.forEach((jobData) => {
-    const job = queue.create('notification', jobData)
+    const job = push_notification_code_3.create('notification', jobData)
       .save((err) => {
         if (err) {
           console.log(`Notification job failed: ${err}`);
